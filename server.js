@@ -26,7 +26,7 @@ const server = http.createServer(app);
 const io = socketIO(server, {
   transports: ["polling"],
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://reliable-profiterole-12fc98.netlify.app",
   },
 });
 
