@@ -27,7 +27,7 @@ const server = http.createServer(app);
 const io = socketIO(server, {
   transports: ["polling"],
   cors: {
-    origin: "https://reliable-profiterole-12fc98.netlify.app",
+    origin: "https://jovial-macaron-629119.netlify.app",
     methods: ["GET", "POST"],
   },
 });
