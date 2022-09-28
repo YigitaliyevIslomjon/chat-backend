@@ -1,4 +1,3 @@
-const express = require("express");
 const { User, validateUserSignUp } = require("../model/user");
 const bcrypt = require("bcrypt");
 require("express-async-errors");
@@ -6,7 +5,7 @@ require("express-async-errors");
 const getUserList = async (req, res) => {
   const { user_name } = req.body;
   const user = await User.find({
-    name: { $regex: user_name, $options: "$i" },
+    user_name: { $regex: user_name, $options: "$i" },
   }).select("-__v");
   return res.status(200).json(user);
 };
