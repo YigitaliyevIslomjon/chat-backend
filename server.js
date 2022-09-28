@@ -28,6 +28,7 @@ const io = socketIO(server, {
   transports: ["polling"],
   cors: {
     origin: "https://reliable-profiterole-12fc98.netlify.app",
+    methods: ["GET", "POST"],
   },
 });
 
@@ -50,7 +51,7 @@ app.use(cors());
 app.use("/api", indexRoute);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5005;
 
 server.listen(PORT, () => {
   console.log(`Started up at prot ${PORT}`);
